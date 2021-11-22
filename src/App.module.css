@@ -1,5 +1,55 @@
 .appCounter {
-  background-color: #525348;
-  min-height: 100vh;
+    background-color: #525348;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.screen {
+    background-color: aquamarine;
+    margin: 20px;
+    text-align: center;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    border: aquamarine 4px solid;
+    border-radius: 10px;
+}
+
+button {
+    width: 400px;
+    height: 40px;
+    color: #525348;
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+
+}
+
+.blockButton {
+    display: flex;
+    align-items: center;
+    border: aquamarine 4px solid;
+    height: 75px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+button:disabled {
+    background-color: #4f7c6e;
+}
+
+.red {
+    color: red;
 }
 
