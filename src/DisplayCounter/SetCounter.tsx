@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import c from '../App.module.css';
-import {Button} from '../Button';
+import {Button} from '../Components/Button';
 
 type SetCounterPropsType={
     max:number

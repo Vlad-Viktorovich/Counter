@@ -1,6 +1,5 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import c from './App.module.css';
-import {Button} from './Button';
 import {Counter} from './DisplayCounter/Counter';
 import {SetCounter} from './DisplayCounter/SetCounter';
 

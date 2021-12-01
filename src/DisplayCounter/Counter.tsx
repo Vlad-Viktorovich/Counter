@@ -1,6 +1,6 @@
 import React from 'react';
 import c from '../App.module.css';
-import {Button} from '../Button';
+import {Button} from '../Components/Button';
 
 type CounterPropsType = {
     count: number
@@ -17,7 +17,7 @@ export const Counter = (props:CounterPropsType) => {
 
         <div className={c.container}>
             <div className={c.screen}>
-                <h1 className={count === 5 ? c.red : ''}>{count}</h1>
+                <h1 className={disabledINC ? c.red : ''}>{count}</h1>
             </div>
             <div className={c.blockButton}>
                 <Button
