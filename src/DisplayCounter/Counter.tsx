@@ -3,12 +3,13 @@ import c from '../App.module.css';
 import {Button} from '../Components/Button';
 
 type CounterPropsType = {
-    count: number
+    count: number | string
     countUp: () => void
     resetCount: () => void
     disabledINC: boolean
     disabledRESET: boolean
-
+    setError:(error:boolean)=>void
+    error:boolean
 }
 
 export const Counter = (props:CounterPropsType) => {

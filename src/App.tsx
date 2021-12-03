@@ -5,18 +5,19 @@ import {SetCounter} from './DisplayCounter/SetCounter';
 
 
 export const App = () => {
-    const [count, setCount] = useState<number>(0);
-    const [max, setMax] = useState<number>(0)
-    const [start, setStart] = useState<number>(0)
-
-
+    const [count, setCount] = useState<number | string>(Number(localStorage.getItem('start')) || 'enter values and press "set"')
+    const [max, setMax] = useState(Number(localStorage.getItem('max')))
+    const [start, setStart] = useState(Number(localStorage.getItem('start')))
+    const [error, setError] = useState(false)
 
     const countUp = () => {
-        setCount(count + 1)
+        if (typeof count === 'number') {
+            setCount(count + 1)
+        }
     }
 
     const resetCount = () => {
-        setCount(0)
+        setCount(start)
     }
 
     const disabledINC = count === max
@@ -25,9 +26,9 @@ export const App = () => {
 
     return (
         <div className={c.appCounter}>
-            <SetCounter setCount={setCount} max={max} setMax={setMax} setStart={setStart} start={start}/>
+            <SetCounter setError={setError} setCount={setCount} max={max} setMax={setMax} setStart={setStart} start={start}/>
             <Counter count={count} countUp={countUp} resetCount={resetCount} disabledINC={disabledINC}
-                     disabledRESET={disabledRESET}/>
+                     disabledRESET={disabledRESET} setError={setError} error={error}/>
 
         </div>
     );
